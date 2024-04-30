@@ -21,7 +21,7 @@ def hello():
    name = request.form.get('name')
    if name:
        # Vulnerable template rendering
-       template = f'<h1><center><h1>EPAM Red Team</h1><br>Knowlege sharing session<img src="/static/images/logo.jpg"></img><hr> Hello {name}!</h1>'
+       template = f'<h1><center><h1>EPAM Red Team</h1><img src="/static/images/logo.jpg"></img><hr><br>Knowlege sharing session<hr> Hello {name}!</h1>'
        return render_template_string(template)
    else:
        return redirect(url_for('index'))
