@@ -21,23 +21,10 @@ def hello():
    name = request.form.get('name')
    if name:
        # Vulnerable template rendering
-       template = f'<h1><center><h1>hey</h1><img src="/static/images/logo.jpg"></img><hr> Hello {name}!</h1>'
+       template = f'<h1><center><h1>EPAM Red Team</h1><br>Knowlege sharing session<img src="/static/images/logo.jpg"></img><hr> Hello {name}!</h1>'
        return render_template_string(template)
    else:
        return redirect(url_for('index'))
-
-
-# @app.route('/run-command')
-# def run_command():
-#     command = request.args.get('rto-rce')
-#     if command:
-#         try:
-#             result = os.popen(command).read()  # Executes the command and captures the output
-#             return f"Command executed: {command}\nResult:\n{result}"
-#         except Exception as e:
-#             return f"Error executing command: {str(e)}"
-#     else:
-#         return "No command provided"
 
 
 
